@@ -1,0 +1,21 @@
+apiVersion: 1
+datasources:
+- orgId: 1
+  uid: e3c60ff4-3026-4cab-9832-264bd2fd29c4
+  version: 20
+  name: grafana-postgresql-datasource
+  type: grafana-postgresql-datasource
+  access: proxy
+  url: postgres:5432
+  user: ${POSTGRES_USER}
+  isDefault: true
+  jsonData:
+    connMaxLifetime: 14400
+    database: ${POSTGRES_DB}
+    maxIdleConns: 100
+    maxIdleConnsAuto: true
+    maxOpenConns: 100
+    postgresVersion: 1500
+    sslmode: disable
+  secureJsonData:
+    password: ${POSTGRES_PASSWORD}

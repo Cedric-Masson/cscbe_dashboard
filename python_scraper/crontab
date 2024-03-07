@@ -1,0 +1,1 @@
+*/1 * * * * /usr/local/bin/python3.12 /app/cscbe_scraper.py >> /var/log/cron.log 2>&1
